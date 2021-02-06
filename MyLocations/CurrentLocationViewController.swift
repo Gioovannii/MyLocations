@@ -11,6 +11,7 @@ import CoreLocation
 class CurrentLocationViewController: UIViewController {
 
     var locationManager = CLLocationManager()
+    var location: CLLocation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +48,21 @@ class CurrentLocationViewController: UIViewController {
         
         present(alert, animated: true)
     }
+    
+    func updateLabels() {
+        if let location = location {
+            latitudeLabel.text = String(format: "%.8f", location.coordinate.latitude)
+            longitudeLabel.text = String(format: "%.8f", location.coordinate.longitude)
+            tagButton.isHidden = false
+            messageLabel.text = ""
+        } else {
+            latitudeLabel.text = ""
+            longitudeLabel.text = ""
+            adressLabel.text = ""
+            tagButton.isHidden = true
+            messageLabel.text = "Tap 'Get My Location' to Start"
+        }
+    }
 
 }
 
@@ -58,6 +74,8 @@ extension CurrentLocationViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let newLocation = locations.last!
         print("didUpdateLocations: \(newLocation)")
+        location = newLocation
+        updateLabels()
     }
 }
 
