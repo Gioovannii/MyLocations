@@ -12,9 +12,12 @@ class CurrentLocationViewController: UIViewController {
 
     var locationManager = CLLocationManager()
     var location: CLLocation?
+    var updatingLocation = false
+    var lastLocationError: Error?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateLabels()
         // Do any additional setup after loading the view.
     }
 
