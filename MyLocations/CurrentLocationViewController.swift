@@ -72,6 +72,12 @@ class CurrentLocationViewController: UIViewController {
 extension CurrentLocationViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("didFailWithError: \(error.localizedDescription)")
+        
+        // loc.Manager cannot find location. So it keep trying to get a loc.
+        if (error as NSError).code == CLError.locationUnknown.rawValue { return }
+        lastLocationError = error
+        stopLocationManager()
+        updateLabels()
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
