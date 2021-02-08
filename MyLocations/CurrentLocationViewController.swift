@@ -15,6 +15,11 @@ class CurrentLocationViewController: UIViewController {
     var updatingLocation = false
     var lastLocationError: Error?
     
+    let geocoder = CLGeocoder()
+    var placemark: CLPlacemark?
+    var performingReverseGeocoding = false
+    var lastGeocodingError: Error?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateLabels()
