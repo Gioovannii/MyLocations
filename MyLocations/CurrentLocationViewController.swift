@@ -148,6 +148,25 @@ extension CurrentLocationViewController: CLLocationManagerDelegate {
                 stopLocationManager()
             }
             updateLabels()
+            
+            if !performingReverseGeocoding {
+                print("*** Let's geocode")
+                
+                performingReverseGeocoding = true
+                
+                geocoder.reverseGeocodeLocation(newLocation) { placemarks, error in
+                    self.lastGeocodingError = error
+                    if error == nil, let places = placemarks, !places.isEmpty {
+                        self.placemark = places.last
+                        print("Places = \(places)")
+                    } else {
+                        self.placemark = nil
+                    }
+                    
+                    self.performingReverseGeocoding = false
+                    self.updateLabels()
+                }
+            }
         }
     }
 }
