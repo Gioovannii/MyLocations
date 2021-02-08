@@ -125,8 +125,25 @@ extension CurrentLocationViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let newLocation = locations.last!
         print("didUpdateLocations: \(newLocation)")
-        location = newLocation
-        updateLabels()
+        
+        // If time where object wass determined is too longhere 5 seconds
+        if newLocation.timestamp.timeIntervalSinceNow < -5 { return }
+        
+        // check where new location is more accurate
+        if newLocation.horizontalAccuracy < 0 { return }
+        
+        // check where location is more precise
+        if location == nil || location!.horizontalAccuracy > newLocation.horizontalAccuracy {
+            
+            lastLocationError = nil
+            location = newLocation
+            
+            if newLocation.horizontalAccuracy <= locationManager.desiredAccuracy {
+                print("We're done!")
+                stopLocationManager()
+            }
+            updateLabels()
+        }
     }
 }
 
