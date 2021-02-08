@@ -86,6 +86,16 @@ class CurrentLocationViewController: UIViewController {
             longitudeLabel.text = String(format: "%.8f", location.coordinate.longitude)
             tagButton.isHidden = false
             messageLabel.text = ""
+            
+            if let placemark = placemark {
+                adressLabel.text = string(from: placemark)
+            } else if performingReverseGeocoding {
+                adressLabel.text = "Searching for Adress ..."
+            } else if lastGeocodingError != nil {
+                adressLabel.text = "Error Finding Adress"
+            } else {
+                adressLabel.text = "No Adress Found"
+            }
         } else {
             latitudeLabel.text = ""
             longitudeLabel.text = ""
