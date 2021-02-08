@@ -37,7 +37,6 @@ class CurrentLocationViewController: UIViewController {
 
     
     // MARK: - Actions
-    
     @IBAction func getLocation() {
         let authStatus = locationManager.authorizationStatus
         if authStatus == .denied || authStatus == .restricted {
@@ -49,6 +48,8 @@ class CurrentLocationViewController: UIViewController {
             location = nil
             lastLocationError = nil
             startLocationManager()
+            placemark = nil
+            lastGeocodingError = nil
         }
         updateLabels()
     }
