@@ -85,7 +85,7 @@ class CurrentLocationViewController: UIViewController {
             longitudeLabel.text = ""
             adressLabel.text = ""
             tagButton.isHidden = true
-//            messageLabel.text = "Tap 'Get My Location' to Start"
+            
             let statusMessage: String
             if let error = lastLocationError as NSError? {
                 if error.domain == kCLErrorDomain && error.code == CLError.denied.rawValue {
