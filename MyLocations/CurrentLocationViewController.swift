@@ -39,9 +39,13 @@ class CurrentLocationViewController: UIViewController {
             showLocationServicesDeniedAlert()
             return
         }
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-        locationManager.startUpdatingLocation()
+        if updatingLocation { stopLocationManager() }
+        else {
+            location = nil
+            lastLocationError = nil
+            startLocationManager()
+        }
+        updateLabels()
     }
 
     // MARK: - Helper Methods
