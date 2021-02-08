@@ -102,6 +102,7 @@ class CurrentLocationViewController: UIViewController {
             }
             messageLabel.text = statusMessage
         }
+        configureGetButton()
     }
     
     func configureGetButton() {
