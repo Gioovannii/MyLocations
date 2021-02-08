@@ -104,12 +104,9 @@ class CurrentLocationViewController: UIViewController {
         }
     }
     
-    func stopLocationManager() {
-        if updatingLocation {
-            locationManager.stopUpdatingLocation()
-            locationManager.delegate = nil
-            updatingLocation = false
-        }
+    func configureGetButton() {
+        if updatingLocation { getButton.setTitle("Stop", for: .normal) }
+        else { getButton.setTitle("Get My Location", for: .normal) }
     }
 }
 
