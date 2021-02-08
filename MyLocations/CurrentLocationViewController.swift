@@ -125,6 +125,32 @@ class CurrentLocationViewController: UIViewController {
         if updatingLocation { getButton.setTitle("Stop", for: .normal) }
         else { getButton.setTitle("Get My Location", for: .normal) }
     }
+    
+    func string(from placemark: CLPlacemark) -> String {
+        var line1 = ""
+        if let tmp = placemark.subThoroughfare {
+            line1 += tmp + " "
+        }
+        
+        if let tmp = placemark.thoroughfare {
+            line1 += tmp + " "
+        }
+        
+        var line2 = ""
+        if let tmp = placemark.locality {
+            line2 += tmp + " "
+        }
+        
+        if let tmp = placemark.administrativeArea {
+            line2 += tmp + " "
+        }
+        
+        if let tmp = placemark.postalCode {
+            line2 += tmp + " "
+        }
+        
+        return line1 + "\n" + line2
+    }
 }
 
 extension CurrentLocationViewController: CLLocationManagerDelegate {
