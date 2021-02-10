@@ -88,6 +88,15 @@ class CurrentLocationViewController: UIViewController {
         }
     }
 
+    // Called after 1 minutes no matter what
+    @objc func didTimeOut() {
+        print("Time Out")
+        if location == nil {
+            stopLocationManager()
+            lastLocationError = NSError(domain: "MyLocationsErrorDomain", code: 1, userInfo: nil)
+            updateLabels()
+        }
+    }
     func updateLabels() {
         if let location = location {
             latitudeLabel.text = String(format: "%.8f", location.coordinate.latitude)
