@@ -191,6 +191,11 @@ extension CurrentLocationViewController: CLLocationManagerDelegate {
         // check where new location is more accurate
         if newLocation.horizontalAccuracy < 0 { return }
         
+        var distance = CLLocationDistance(Double.greatestFiniteMagnitude)
+        if let location = location {
+            distance = newLocation.distance(from: location)
+        }
+        
         // check where location is more precise
         if location == nil || location!.horizontalAccuracy > newLocation.horizontalAccuracy {
             
