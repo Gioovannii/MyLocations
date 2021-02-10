@@ -19,6 +19,8 @@ class CurrentLocationViewController: UIViewController {
     var placemark: CLPlacemark?
     var performingReverseGeocoding = false
     var lastGeocodingError: Error?
+    var timer: Timer?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -203,7 +205,15 @@ extension CurrentLocationViewController: CLLocationManagerDelegate {
                     self.performingReverseGeocoding = false
                     self.updateLabels()
                 }
+            } else if distance < 1 {
+                let timeInterval = newLocation.timestamp.timeIntervalSince(location!.timestamp)
+                if timeInterval > 10 {
+                    print("Force Done!")
+                    stopLocationManager()
+                    updateLabels()
+                }
             }
+            
         }
     }
 }
