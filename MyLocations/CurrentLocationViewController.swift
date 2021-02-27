@@ -28,6 +28,11 @@ class CurrentLocationViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
     // MARK: - Outlets
 
     @IBOutlet var messageLabel: UILabel!
@@ -135,6 +140,7 @@ class CurrentLocationViewController: UIViewController {
             }
             messageLabel.text = statusMessage
         }
+        
         configureGetButton()
     }
     
