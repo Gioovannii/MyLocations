@@ -9,6 +9,8 @@ import UIKit
 import CoreLocation
 
 class LocationDetailsViewController: UITableViewController {
+    
+    // MARK: - Outlets
     @IBOutlet var descriptionTextView: UITextView!
     @IBOutlet var categoryLabel: UILabel!
     @IBOutlet var latitudeLabel: UILabel!
