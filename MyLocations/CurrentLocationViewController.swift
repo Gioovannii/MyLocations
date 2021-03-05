@@ -21,14 +21,6 @@ class CurrentLocationViewController: UIViewController {
     var lastGeocodingError: Error?
     var timer: Timer?
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        updateLabels()
-        // Do any additional setup after loading the view.
-    }
-
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
