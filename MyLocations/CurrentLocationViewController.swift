@@ -9,7 +9,7 @@ import UIKit
 import CoreLocation
 
 class CurrentLocationViewController: UIViewController {
-
+    
     var locationManager = CLLocationManager()
     var location: CLLocation?
     var updatingLocation = false
@@ -31,16 +31,15 @@ class CurrentLocationViewController: UIViewController {
         updateLabels()
         // Do any additional setup after loading the view.
     }
-
+    
     // MARK: - Outlets
-
     @IBOutlet var messageLabel: UILabel!
     @IBOutlet var latitudeLabel: UILabel!
     @IBOutlet var longitudeLabel: UILabel!
     @IBOutlet var adressLabel: UILabel!
     @IBOutlet var tagButton: UIButton!
     @IBOutlet var getButton: UIButton!
-
+    
     
     // MARK: - Actions
     @IBAction func getLocation() {
@@ -59,7 +58,7 @@ class CurrentLocationViewController: UIViewController {
         }
         updateLabels()
     }
-
+    
     // MARK: - Helper Methods
     func showLocationServicesDeniedAlert() {
         let alert = UIAlertController(title: "Location Services Disabled", message: "Please enable location services for this app in app settings.", preferredStyle: .alert)
@@ -91,7 +90,7 @@ class CurrentLocationViewController: UIViewController {
             }
         }
     }
-
+    
     // Called after 1 minutes no matter what
     @objc func didTimeOut() {
         print("Time Out")
