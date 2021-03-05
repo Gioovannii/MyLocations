@@ -25,6 +25,13 @@ class CurrentLocationViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateLabels()
+        // Do any additional setup after loading the view.
+    }
+
     // MARK: - Outlets
 
     @IBOutlet var messageLabel: UILabel!
