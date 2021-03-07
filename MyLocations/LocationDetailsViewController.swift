@@ -19,6 +19,10 @@ class LocationDetailsViewController: UITableViewController {
     @IBOutlet var dateLabel: UILabel!
     
     
+    var coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
+    var placemark: CLPlacemark?
+    
+    // MARK: - Life Cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = false
