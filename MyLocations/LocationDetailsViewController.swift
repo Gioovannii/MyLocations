@@ -27,6 +27,7 @@ class LocationDetailsViewController: UITableViewController {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = false
     }
+    
     // MARK: - Actions
     @IBAction func done() {
         navigationController?.popViewController(animated: true)
@@ -35,5 +36,4 @@ class LocationDetailsViewController: UITableViewController {
     @IBAction func cancel() {
         navigationController?.popViewController(animated: true)
     }
-
 }
