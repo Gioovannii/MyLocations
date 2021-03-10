@@ -31,6 +31,9 @@ class LocationDetailsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        descriptionTextView.text = ""
+        categoryLabel.text = ""
+        
     }
     
     // MARK: - Actions
