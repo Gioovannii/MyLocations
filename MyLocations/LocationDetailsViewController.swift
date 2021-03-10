@@ -28,6 +28,11 @@ class LocationDetailsViewController: UITableViewController {
         navigationController?.isNavigationBarHidden = false
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
     // MARK: - Actions
     @IBAction func done() {
         navigationController?.popViewController(animated: true)
