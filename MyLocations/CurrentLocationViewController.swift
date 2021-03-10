@@ -59,6 +59,9 @@ class CurrentLocationViewController: UIViewController {
         updateLabels()
     }
     
+    // MARK: - Navigation
+
+    
     // MARK: - Helper Methods
     func showLocationServicesDeniedAlert() {
         let alert = UIAlertController(title: "Location Services Disabled", message: "Please enable location services for this app in app settings.", preferredStyle: .alert)
