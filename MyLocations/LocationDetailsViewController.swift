@@ -8,6 +8,13 @@
 import UIKit
 import CoreLocation
 
+private let dateFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateStyle = .medium
+    formatter.timeStyle = .short
+    return formatter
+}()
+
 class LocationDetailsViewController: UITableViewController {
     
     // MARK: - Outlets
