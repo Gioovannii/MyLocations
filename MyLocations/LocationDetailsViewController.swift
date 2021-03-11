@@ -44,7 +44,7 @@ class LocationDetailsViewController: UITableViewController {
         
         latitudeLabel.text = String(format: "%.8f", coordinate.latitude)
         longitudeLabel.text = String(format: "%.8f", coordinate.longitude)
-
+        
         if let placemark = placemark {
             adressLabel.text = string(from: placemark)
         } else {
