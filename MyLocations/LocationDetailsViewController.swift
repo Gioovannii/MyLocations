@@ -84,4 +84,8 @@ class LocationDetailsViewController: UITableViewController {
       }
       return text
     }
+    
+    func format(date: Date) -> String {
+        return dateFormatter.string(from: date)
+    }
 }
