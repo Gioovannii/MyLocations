@@ -8,5 +8,6 @@
 import UIKit
 
 class CategoryPickerViewController {
+    var selectedCategoryName = ""
     
 }
