@@ -48,6 +48,12 @@ class CategoryPickerViewController: UITableViewController {
         let categorieName = categories[indexPath.row]
         cell.textLabel!.text = categorieName
         
+        if categorieName == selectedCategoryName {
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
+        }
         return cell
     }
+    
 }
