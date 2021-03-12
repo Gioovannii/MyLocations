@@ -23,4 +23,6 @@ class CategoryPickerViewController {
         "Landmark",
         "Park"
     ]
+    
+    var selectedIndexPath = IndexPath()
 }
