@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CategoryPickerViewController {
+class CategoryPickerViewController: UITableViewController {
     var selectedCategoryName = ""
 
     let categories = [
@@ -25,4 +25,10 @@ class CategoryPickerViewController {
     ]
     
     var selectedIndexPath = IndexPath()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+    }
 }
