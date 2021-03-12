@@ -36,4 +36,7 @@ class CategoryPickerViewController: UITableViewController {
             }
         }
     }
+    
+    // MARK: - TableView Delegates
+
 }
