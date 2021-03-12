@@ -38,5 +38,7 @@ class CategoryPickerViewController: UITableViewController {
     }
     
     // MARK: - TableView Delegates
-
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return categories.count
+    }
 }
