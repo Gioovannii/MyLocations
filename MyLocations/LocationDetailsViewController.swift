@@ -18,6 +18,8 @@ private let dateFormatter: DateFormatter = {
 
 class LocationDetailsViewController: UITableViewController {
     
+    var categoryName = "No Category"
+    
     // MARK: - Outlets
     @IBOutlet var descriptionTextView: UITextView!
     @IBOutlet var categoryLabel: UILabel!
