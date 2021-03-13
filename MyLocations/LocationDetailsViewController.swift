@@ -55,6 +55,10 @@ class LocationDetailsViewController: UITableViewController {
         dateLabel.text = format(date: Date())
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        <#code#>
+    }
+    
     // MARK: - Actions
     @IBAction func done() {
         navigationController?.popViewController(animated: true)
