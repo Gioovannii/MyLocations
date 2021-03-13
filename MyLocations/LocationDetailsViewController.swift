@@ -42,7 +42,7 @@ class LocationDetailsViewController: UITableViewController {
         super.viewDidLoad()
         
         descriptionTextView.text = ""
-        categoryLabel.text = ""
+        categoryLabel.text = categoryName
         
         latitudeLabel.text = String(format: "%.8f", coordinate.latitude)
         longitudeLabel.text = String(format: "%.8f", coordinate.longitude)
