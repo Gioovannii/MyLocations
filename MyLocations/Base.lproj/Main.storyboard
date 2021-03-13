@@ -182,15 +182,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLC-nW-0gC">
-                                                    <rect key="frame" x="20" y="11.666666666666664" width="80" height="21"/>
+                                                    <rect key="frame" x="20" y="11.666666666666666" width="80" height="20.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="NLC-nW-0gC" firstAttribute="leading" secondItem="xVZ-ef-7XO" secondAttribute="leadingMargin" id="LJj-nu-T9x"/>
-                                                <constraint firstItem="NLC-nW-0gC" firstAttribute="centerY" secondItem="xVZ-ef-7XO" secondAttribute="centerY" id="Vos-Yw-e4i"/>
+                                                <constraint firstItem="NLC-nW-0gC" firstAttribute="top" secondItem="xVZ-ef-7XO" secondAttribute="topMargin" constant="0.6666666666666643" id="AR5-AC-snc"/>
+                                                <constraint firstItem="NLC-nW-0gC" firstAttribute="centerY" secondItem="xVZ-ef-7XO" secondAttribute="centerY" id="IRX-ok-Uq4"/>
+                                                <constraint firstItem="NLC-nW-0gC" firstAttribute="leading" secondItem="xVZ-ef-7XO" secondAttribute="leadingMargin" id="cqS-2f-ihu"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="NLC-nW-0gC" secondAttribute="trailing" id="fub-v0-Hby"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
