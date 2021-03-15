@@ -325,12 +325,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="adressLabel" destination="gzd-YK-ieI" id="r42-vT-sVO"/>
-                        <outlet property="categoryLabel" destination="jDt-W2-0Ki" id="0pz-BA-CUm"/>
-                        <outlet property="dateLabel" destination="Kj8-Kh-bTY" id="hOi-Qg-t7v"/>
-                        <outlet property="descriptionTextView" destination="C57-0e-lTW" id="Pps-IF-8PN"/>
-                        <outlet property="latitudeLabel" destination="d4W-KQ-XNd" id="GmB-Jl-4ac"/>
-                        <outlet property="longitudeLabel" destination="1fb-TU-Lww" id="M90-8b-FA6"/>
+                        <outlet property="adressLabel" destination="8cZ-Y4-C8a" id="Cdu-ZD-HDO"/>
+                        <outlet property="categoryLabel" destination="PVe-re-7y7" id="Sgm-sF-yJ6"/>
+                        <outlet property="dateLabel" destination="iXQ-qq-nHC" id="2Yf-HM-uLo"/>
+                        <outlet property="descriptionTextView" destination="C57-0e-lTW" id="vyN-8v-cQS"/>
+                        <outlet property="latitudeLabel" destination="Vcu-GH-1RT" id="6EC-DG-2Qd"/>
+                        <outlet property="longitudeLabel" destination="mhO-Cv-Tg9" id="Cqi-Jp-dQf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QlG-ML-WW2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
