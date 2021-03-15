@@ -21,12 +21,13 @@ class LocationDetailsViewController: UITableViewController {
     var categoryName = "No Category"
     
     // MARK: - Outlets
-    @IBOutlet var descriptionTextView: UITextView!
-    @IBOutlet var categoryLabel: UILabel!
-    @IBOutlet var latitudeLabel: UILabel!
-    @IBOutlet var longitudeLabel: UILabel!
-    @IBOutlet var adressLabel: UILabel!
-    @IBOutlet var dateLabel: UILabel!
+    @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var latitudeLabel: UILabel!
+    @IBOutlet weak var longitudeLabel: UILabel!
+    @IBOutlet weak var adressLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    
     
     
     var coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
