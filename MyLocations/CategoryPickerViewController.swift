@@ -57,6 +57,7 @@ class CategoryPickerViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(selectedIndexPath.row)
         if indexPath.row != selectedIndexPath.row {
             if let newCell = tableView.cellForRow(at: indexPath) {
                 newCell.accessoryType = .checkmark
