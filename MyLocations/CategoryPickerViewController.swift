@@ -45,8 +45,8 @@ class CategoryPickerViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        let categorieName = categories[indexPath.row]
-        cell.textLabel!.text = categorieName
+        let categoryName = categories[indexPath.row]
+        cell.textLabel!.text = categoryName
         
         if categorieName == selectedCategoryName {
             cell.accessoryType = .checkmark
