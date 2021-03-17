@@ -170,7 +170,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="WBa-dm-ggb" kind="show" id="8xF-Cj-OFw"/>
+                                            <segue destination="WBa-dm-ggb" kind="show" identifier="PickCategory" id="8xF-Cj-OFw"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -410,7 +410,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jxQ-fO-f2X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1931.7757009345794" y="115.98272138228943"/>
+            <point key="canvasLocation" x="1845" y="116"/>
         </scene>
     </scenes>
     <resources>
