@@ -363,7 +363,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="U3B-Tk-apJ" kind="unwind" unwindAction="categoryPickerDidPickCategory:" id="HHC-1h-xeK"/>
+                                    <segue destination="U3B-Tk-apJ" kind="unwind" identifier="PickedCategory" unwindAction="categoryPickerDidPickCategory:" id="HHC-1h-xeK"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
