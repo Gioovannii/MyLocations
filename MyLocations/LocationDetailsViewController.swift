@@ -123,4 +123,12 @@ class LocationDetailsViewController: UITableViewController {
     func format(date: Date) -> String {
         return dateFormatter.string(from: date)
     }
+    
+    // MARK: - Table View delegates
+
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if indexPath.section == 0 || indexPath.row == 1 { return indexPath }
+        else { return nil }
+    }
+ 
 }
