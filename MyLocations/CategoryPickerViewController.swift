@@ -11,7 +11,7 @@ class CategoryPickerViewController: UITableViewController {
     var selectedCategoryName = ""
 
     let categories = [
-        "No Categories",
+        "No Category",
         "Apple Store",
         "Bar",
         "Bookstore",
