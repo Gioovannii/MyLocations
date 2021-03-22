@@ -53,6 +53,11 @@ class LocationDetailsViewController: UITableViewController {
             adressLabel.text = "No adress Found"
         }
         dateLabel.text = format(date: Date())
+        
+        // hide keyboard
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        gestureRecognizer.cancelsTouchesInView = false
+        tableView.addGestureRecognizer(gestureRecognizer)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
