@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreData
-
+import CoreLocation
 
 extension Location {
 
@@ -21,7 +21,7 @@ extension Location {
     @NSManaged public var latitude: Double
     @NSManaged public var locationDescription: String?
     @NSManaged public var longitude: Double
-    @NSManaged public var placemark: NSObject?
+    @NSManaged public var placemark: CLPlacemark?
 
 }
 
