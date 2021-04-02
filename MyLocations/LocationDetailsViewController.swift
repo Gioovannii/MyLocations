@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import CoreData
 
 private let dateFormatter: DateFormatter = {
     let formatter = DateFormatter()
@@ -18,7 +19,7 @@ private let dateFormatter: DateFormatter = {
 class LocationDetailsViewController: UITableViewController {
     
     var categoryName = "No Category"
-    var managedContext: NSManagedObjectContext!
+    var managedObjectContext: NSManagedObjectContext!
     
     // MARK: - Outlets
     @IBOutlet weak var descriptionTextView: UITextView!
