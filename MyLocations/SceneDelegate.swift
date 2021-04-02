@@ -29,6 +29,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         return container
     }()
+    
+    lazy var managedContext = persistentContainer.viewContext
     var window: UIWindow?
     
     // MARK: - Core Data Saving support
