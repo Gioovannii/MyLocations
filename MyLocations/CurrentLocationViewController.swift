@@ -22,6 +22,8 @@ class CurrentLocationViewController: UIViewController {
     var lastGeocodingError: Error?
     var timer: Timer?
     
+    var managedContext: NSManagedObjectContext!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
