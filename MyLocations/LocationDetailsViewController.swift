@@ -18,6 +18,7 @@ private let dateFormatter: DateFormatter = {
 class LocationDetailsViewController: UITableViewController {
     
     var categoryName = "No Category"
+    var managedContext: NSManagedObjectContext!
     
     // MARK: - Outlets
     @IBOutlet weak var descriptionTextView: UITextView!
