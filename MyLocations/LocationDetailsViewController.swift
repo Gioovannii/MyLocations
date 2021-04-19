@@ -89,6 +89,7 @@ class LocationDetailsViewController: UITableViewController {
         location.latitude = coordinate.latitude
         location.longitude = coordinate.longitude
         location.date = date
+        location.placemark = placemark
         
         afterDelay(0.6) {
             hudView.hide()
