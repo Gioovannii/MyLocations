@@ -84,7 +84,7 @@ class LocationDetailsViewController: UITableViewController {
         let hudView = HudView.hud(inView: mainView, animated: true)
         hudView.text = "Tagged"
         let location = Location(context: managedObjectContext)
-        
+        location.locationDescription = descriptionTextView.text
         
         afterDelay(0.6) {
             hudView.hide()
