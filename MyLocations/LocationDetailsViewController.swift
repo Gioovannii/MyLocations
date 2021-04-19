@@ -87,6 +87,8 @@ class LocationDetailsViewController: UITableViewController {
         location.locationDescription = descriptionTextView.text
         location.category = categoryName
         location.latitude = coordinate.latitude
+        location.longitude = coordinate.longitude
+        location.date = date
         
         afterDelay(0.6) {
             hudView.hide()
