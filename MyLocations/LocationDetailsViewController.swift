@@ -54,7 +54,7 @@ class LocationDetailsViewController: UITableViewController {
         } else {
             adressLabel.text = "No adress Found"
         }
-        dateLabel.text = format(date: Date())
+        dateLabel.text = format(date: date)
         
         // hide keyboard
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
