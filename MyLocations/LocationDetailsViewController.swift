@@ -31,8 +31,6 @@ class LocationDetailsViewController: UITableViewController {
     @IBOutlet weak var adressLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
-    
-    
     var coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     var placemark: CLPlacemark?
     
