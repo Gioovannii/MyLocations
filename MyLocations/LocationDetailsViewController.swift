@@ -20,6 +20,8 @@ class LocationDetailsViewController: UITableViewController {
     
     var categoryName = "No Category"
     var managedObjectContext: NSManagedObjectContext!
+    var date = Date()
+    
     
     // MARK: - Outlets
     @IBOutlet weak var descriptionTextView: UITextView!
