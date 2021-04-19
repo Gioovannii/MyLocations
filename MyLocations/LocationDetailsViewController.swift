@@ -91,9 +91,14 @@ class LocationDetailsViewController: UITableViewController {
         location.date = date
         location.placemark = placemark
         
-        afterDelay(0.6) {
-            hudView.hide()
-            self.navigationController?.popViewController(animated: true)
+        do {
+            try managedObjectContext.save()
+            afterDelay(0.6) {
+                hudView.hide()
+                self.navigationController?.popViewController(animated: true)
+            }
+        } catch {
+            fatalError("Error: \(error)")
         }
     }
     
