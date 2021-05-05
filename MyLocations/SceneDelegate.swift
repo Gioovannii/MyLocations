@@ -92,7 +92,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     // MARK: - Helper method
     func listenForFatalCoreDataNotification() {
-        NotificationCenter.default.addObserver(forName: dataSAveWithFailedNotification, object: nil, queue: OperationQueue, using: OperationQueue.main) { _ in
+        NotificationCenter.default.addObserver(forName: dataSAveWithFailedNotification, object: nil, queue: OperationQueue.main) { _ in
             let message = """
                 There was a fatal error in the app and it cannot continue.
                 Press OK to terminate the app. Sorry for the inconvenience.
