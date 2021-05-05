@@ -106,6 +106,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 exception.raise()
             }
             alert.addAction(action)
+            
+            let tabControler = self.window!.rootViewController
+            tabControler?.present(alert, animated: true, completion: nil)
         }
     }
 }
