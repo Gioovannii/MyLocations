@@ -88,6 +88,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // Save changes in the application's managed object context when the application transitions to the background.
         saveContext()
-    }  
+    }
+    
+    // MARK: - Helper method
+    func listenForFatalCoreDataNotification() {
+        NotificationCenter.default.addObserver(forName: dataSAveWithFailedNotification, object: nil, queue: OperationQueue, using: OperationQueue.main) { _ in
+            
+        }
+    }
+
 }
 
