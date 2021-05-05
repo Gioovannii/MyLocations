@@ -101,7 +101,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let alert = UIAlertController(title: "Internal Error", message: message, preferredStyle: .alert)
             
             
-           
+            let action = UIAlertAction(title: "OK", style: .default) { _ in
+                let exception = NSException(name: NSExceptionName.internalInconsistencyException, reason: "Fatal core data Error", userInfo: nil)
+                exception.raise()
+            }
+            alert.addAction(action)
         }
     }
 }
